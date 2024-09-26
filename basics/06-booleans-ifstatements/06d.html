@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<script>
+
+
+const age = Math.random()*(100-2)+2;
+
+
+
+let isHoliday = parseInt((Math.random()*(2-0)+0));
+
+if(isHoliday){
+  isHoliday = false;
+}else{
+  isHoliday = true;
+}
+
+if(isHoliday = true && (age<= 6 || age >=65)){
+  alert('Com desconto de feriado e idade!')
+} else if (isHoliday = false && (age<= 6 || age >=65)){
+  alert('Com desconto de idade apenas') 
+} else if(isHoliday = true && (age > 6 || age < 45)) {
+  alert('Com desconto somente do feriado!')
+}else{
+  alert('Sem desconto!')
+}
+
+
+
+
+
+</script>
+</body>
+</html>

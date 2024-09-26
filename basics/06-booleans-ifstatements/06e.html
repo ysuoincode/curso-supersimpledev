@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coin-Flip exercises 6e - 6i</title>
+</head>
+<body>
+<h1>Coin-Flip Game</h1>
+<p>Chose your option:</p>
+<button onclick="
+
+let coinFlip = Math.random();
+console.log(coinFlip)
+  coinFlip <= 0.5 ? coinFlip = 'cara' : coinFlip = 'coroa';
+console.log(coinFlip)
+  coinFlip === 'cara'? alert('You Win') : alert('You Lose!');
+
+">Cara</button>
+<button onclick="
+
+coinFlip = Math.random();
+console.log(coinFlip)
+  coinFlip <= 0.5 ? coinFlip = 'cara' : coinFlip = 'coroa';
+console.log(coinFlip)
+  coinFlip === 'coroa'? alert('You Win') : alert('You Lose!');
+">Coroa</button>
+
+<script>
+</script>
+</body>
+</html>
