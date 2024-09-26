@@ -1,0 +1,2 @@
+# curso-supersimpledev
+ studying JS
