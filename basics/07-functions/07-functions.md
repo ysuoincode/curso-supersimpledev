@@ -8,7 +8,7 @@
 function "nome da function"(){
   bloco de código
 }
-<code>
+  
 ## Executando/chamando uma função 
 'nome da fução'();
 
