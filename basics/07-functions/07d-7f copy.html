@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Functions 7d - 7f</title>
+</head>
+<body>
+<script>
+/*
+7d - Criar uma function 'covertToFahrenheit(celsius)' que retorne um numero
+7d - Criar uma function 'covertToCelsius(fahrenheit)' que retorne um numero
+7f - Criar uma functions 'convertTemperature(degrees,unit)', que retorne uma string dizendo a temperatura convertida de acordo com  a unidade, reutilizando as functions da 7d e 7e. 
+
+*/
+
+  function convertTemperature(degrees,unit){
+    if(unit === 'C'){
+      convertToFahrenheit(degrees)
+    }else if (unit === 'F'){
+      convertToCelsius(degrees)
+    }
+
+    return console.log(`Temperature: ${temperature}${unit}`)
+    
+    //functions
+    function convertToFahrenheit(celsius){
+     temperature = ((celsius*9/5)+32)
+      return temperature
+    }
+
+    function convertToCelsius(fahrenheit){
+     temperature = ((fahrenheit - 32)*5/9)
+     return temperature
+    }
+
+  }
+
+  convertTemperature(25,'C')
+  convertTemperature(86,'F')
+
+</script>
+</body>
+</html>
