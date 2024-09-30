@@ -4,11 +4,11 @@
 - Um recurso para reutilizarmos nosso código;
 
 ## Estrutura de uma function
-
+<code>
 function "nome da function"(){
   bloco de código
 }
-
+  
 ## Executando/chamando uma função 
 'nome da fução'();
 
