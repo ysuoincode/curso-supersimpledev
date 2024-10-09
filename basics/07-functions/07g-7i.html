@@ -23,63 +23,50 @@
 
 */
 
-convertLength(5,'miles','km')
-convertLength(5,'miles','ft')
-convertLength(5,'km','ft')
-convertLength(5,'lbs','lbs')
+function convertLength(length, from, to) {
+        // I like to put invalid checks at the top since it's a bit
+        // easier to see. Also, if something is invalid, we can skip
+        // the rest of the function.
+        if (from !== 'km' && from !== 'miles' && from !== 'ft') {
+          return `Invalid unit: ${from}`;
+        } else if (to !== 'km' && to !== 'miles' && to !== 'ft') {
+          return `Invalid unit: ${to}`;
+        }
+        
+        if (from === 'km' && to === 'miles') {
+          return `${length / 1.6} ${to}`;
 
+        } else if (from === 'km' && to === 'ft') {
+          return `${length * 3281} ${to}`;
+          
+        } else if (from === 'miles' && to === 'km') {
+          return `${length * 1.6} ${to}`;
 
-//main function
-function convertLength(length,from,to){
-  if (from === 'miles'){
-    convertMiles(length,from,to)
-  } else if(from === 'km'){
-    convertKm(length,from,to)
-  }else if(from === 'ft'){
-    convertFt(length,from,to)
-  }else if(from === to){
-    console.log(`${length}${from}`)
-    return
-  }else if(){
-    console.log('Unidade inválida!')
-    return
-  }
-  console.log(`${distance}${to}`)
+        } else if (from === 'miles' && to === 'ft') {
+          return `${length * 5280} ${to}`;
 
-}
+        } else if (from === 'ft' && to === 'km') {
+          return `${length / 3281} ${to}`;
 
+        } else if (from === 'ft' && to === 'miles') {
+          return `${length / 5280} ${to}`;
 
-//secondary functions 
+        // You can also do if (from === 'km' && to === 'km) { ... }
+        // if (from === to) is a trick you can use to save some code.
+        } else if (from === to) {
+          return `${length} ${to}`;
+        }
+      }
+      
+      console.log(convertLength(50, 'miles', 'km'));
+      console.log(convertLength(32, 'km', 'miles'));
+      console.log(convertLength(50, 'km', 'km'));
 
-function convertMiles (length,from,to){
-  if( from === 'miles' && to === 'km'){
-    distance = (length * 1.6)
-    return distance 
-  }else if(from === 'miles' && to === 'ft'){
-    distance = (length * 5280)
-    return distance
-  }
-  
-}
+      console.log(convertLength(5, 'miles', 'km'));
+      console.log(convertLength(5, 'miles', 'ft'));
+      console.log(convertLength(5, 'km', 'ft'));
 
-function convertKm(length,from,to){
-  if(from === 'km' && to === 'miles'){
-    distance = (length / 1.609)
-    return distance
-  }else if(from === 'km' && to === 'ft'){
-    distance = (length * 3281)
-    return distance
-  }
-}
-
-function convertFt(length,from,to){
-  if(from === 'ft' && to === 'miles'){
-    distance = (length / 5280)
-    return distance
-  } else if(from === 'ft' && to === 'km'){
-    distance = (length / 3281 )
-  }
-}
+      console.log(convertLength(5, 'lbs', 'lbs'));
 
 
 </script>
